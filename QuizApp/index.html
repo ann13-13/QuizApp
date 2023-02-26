@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="start-screen ">
+            <h1 class="heading">Тестирование</h1>
+            <div class="settings">
+                <label for="num-questions">Колличество вопросов:</label>
+                <select name="" id="num-questions">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                </select>
+                <label for="category">Тема:</label>
+                <select name="" id="category">
+                    <option value="PHP">PHP</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Laravel">Laravel</option>
+                    <option value="HTML">HTML</option>
+                </select>
+                <label for="difficulty">Сложность:</label>
+                <select name="" id="difficulty">
+                    <option value="Easy">Легкая</option>
+                    <option value="Medium">Средняя</option>
+                    <option value="Hard">Сложная</option>
+                </select>
+                <label for="time">Время на вопрос:</label>
+                <select name="" id="time">
+                    <option value="10">10 секунд</option>
+                    <option value="15">15 секунд</option>
+                    <option value="20">20 секунд</option>
+                    <option value="25">25 секунд</option>
+                    <option value="30">30 секунд</option>
+                    <option value="60">60 секунд</option>
+                </select>   
+            </div>
+            <button class="btn start">Начать тестирование</button>
+        </div>
+        <div class="quiz hide">
+            <div class="timer">
+                <div class="progress">
+                    <div class="progress-bar"></div>
+                    <span class="progress-text">50</span>
+                </div>
+            </div>
+            <div class="question-wrapper">
+                <div class="number">
+                    Question <span class="current">1</span>
+                    <span class="total">/10</span>            
+                </div>
+                <div class="question"></div>
+            </div>
+            <div class="answer-wrapper">
+                <div class="answer">
+                    <span class="text">
+                        
+                    </span>
+                    <span class="checkbox">
+                        <span class="icon">✓</span>
+                    </span>
+                </div>
+                <div class="answer selected">
+                    <span class="text">
+                        
+                    </span>
+                    <span class="checkbox">
+                        <span class="icon">✓</span>
+                    </span>
+                </div>
+                <div class="answer wrong">
+                    <span class="text">
+                        
+                    </span>
+                    <span class="checkbox">
+                        <span class="icon">✓</span>
+                    </span>
+                </div>
+                <div class="answer correct">
+                    <span class="text">
+                        
+                    </span>
+                    <span class="checkbox">
+                        <span class="icon">✓</span>
+                    </span>
+                </div>
+            </div>
+            <button class="btn submit" disabled>Ответить</button>
+            <button class="btn next">Следующий</button>
+            
+        </div>
+        <div class="end-screen hide">
+            <h1 class="heading">Тестирование</h1>
+            <div class="score">
+                <span class="score-text">Твои очки:</span>
+                <div class="">
+                    <span class="final-score">0</span>
+                    <span class="total-score">/10</span>
+                </div>
+            </div>
+            <button class="btn restart">Начать заново</button>
+            
+        </div>
+    </div>
+    <script src="script.js" ></script>
+</body>
+</html>
